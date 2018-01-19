@@ -3,28 +3,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
 var vue_1 = require("vue");
 var vue_class_component_1 = require("vue-class-component");
-var vue_property_decorator_1 = require("vue-property-decorator");
 var BasicService_1 = require("../../services/BasicService");
 var fx_1 = require("@omnia/fx");
-var BasicComponent = (function (_super) {
+var BasicComponent = /** @class */ (function (_super) {
     tslib_1.__extends(BasicComponent, _super);
     function BasicComponent() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.message = "Hej Fluffi";
-        return _this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     BasicComponent.prototype.mounted = function () {
         fx_1.WebComponentBootstrapper.registerElementInstance(this, this.$el);
     };
     BasicComponent.prototype.render = function (h) {
         return (<div>
-                I am a basic component
+                I am a web component
             </div>);
     };
-    tslib_1.__decorate([
-        vue_property_decorator_1.Prop(),
-        tslib_1.__metadata("design:type", String)
-    ], BasicComponent.prototype, "message", void 0);
     tslib_1.__decorate([
         fx_1.Inject(BasicService_1.BasicService),
         tslib_1.__metadata("design:type", BasicService_1.BasicService)

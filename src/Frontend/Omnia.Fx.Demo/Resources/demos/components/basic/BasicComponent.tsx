@@ -19,7 +19,6 @@ import {
 @Component
 export class BasicComponent extends Vue implements IWebComponentInstance {
 
-    @Prop() message: string = "Hej Fluffi";
     @Inject(BasicService) private basicService: BasicService;
     @Inject(HttpClient) private httpClient: HttpClient;
     @Inject(OmniaContext) private omniaContext: OmniaContext;
@@ -34,7 +33,7 @@ export class BasicComponent extends Vue implements IWebComponentInstance {
     render(h) {
         return (
             <div>
-                I am a basic component
+                I am a web component
             </div>
         )
     }
