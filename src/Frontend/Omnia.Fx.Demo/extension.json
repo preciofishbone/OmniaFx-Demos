@@ -1,0 +1,11 @@
+{
+  "Id": "9d8c3a73-bd47-46d8-a56a-4868a0dad2b8",
+  "Version": "1.0.0",
+  "Title": "Omnia.Fx.Demo",
+  "Description": "",
+  "TenantResourceFolders": [ "TenantResources","Resources\\Dist"],
+  "AppSettings": {},
+  "ScriptSettings": {
+    "OmitModulePath": "/TenantResources"
+  }
+}

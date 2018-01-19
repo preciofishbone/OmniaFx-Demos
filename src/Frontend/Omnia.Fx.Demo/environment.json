@@ -1,0 +1,11 @@
+{
+  "TenantId": "00000000-0000-0000-0000-000000000000",
+  "ApiSecret": "",
+  "FoundationUrl": "",
+  "Hosting": {
+    "Enabled": false,
+    "Port": 9900,
+    "UseLiveReload": true
+  },
+  "FeatureActivations": []
+}

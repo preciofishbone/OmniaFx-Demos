@@ -1,0 +1,8 @@
+﻿{
+  "manifest": {
+    "scanFolders": [ "Resources" ],
+    "outputDir": "Resources/Dist",
+    "references": [
+    ]
+  }
+}

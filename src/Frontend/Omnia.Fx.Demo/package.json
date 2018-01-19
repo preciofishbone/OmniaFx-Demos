@@ -1,0 +1,24 @@
+{
+  "name": "omnia",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "omf-before-build": "gulp omf-before-build",
+    "omf-after-build": "gulp omf-after-build"
+  },
+  "dependencies": {
+    "@omnia/tooling": "1.0.9371-preview",
+    "@omnia/foundation": "1.0.9371-preview",
+    "@omnia/fx": "1.0.9371-preview",
+    "@omnia/spfx": "1.0.9371-preview",
+    "gulp-less": "3.0.3"
+  },
+  "devDependencies": {
+    "glob": "5.0.13",
+    "gulp": "3.9.1",
+    "gulp-cli": "1.2.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

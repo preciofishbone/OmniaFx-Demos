@@ -1,0 +1,8 @@
+{
+  "name": "less",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulpe-less": "3.0.3",
+    "@omnia/fx": "latest"
+  }
+}

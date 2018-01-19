@@ -1,0 +1,29 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+packages
+
+# Build generated files
+Dist
+.cache-loader
+package-lock.json
+
+# OSX
+.DS_Store
+
+# Visual Studio files
+.ntvs_analysis.dat
+.vs
+bin
+obj
+
+# Certs
+*.pfx
+
+We use typescript all in
+*.js
+

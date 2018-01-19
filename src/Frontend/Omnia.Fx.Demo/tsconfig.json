@@ -1,0 +1,29 @@
+﻿{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": [ "es2015", "dom" ],
+    "declaration": true,
+    "sourceMap": false,
+    "inlineSourceMap": false,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve"
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "bin",
+    "obj",
+    "node_modules",
+    "TaskRunner",
+    "Resources/Dist/**/*.ts",
+    "TenantResources/Angular2/**/*.ngsummary.ts",
+    "TenantResources/Angular2/**/*.ngfactory.ts"
+  ]
+}
