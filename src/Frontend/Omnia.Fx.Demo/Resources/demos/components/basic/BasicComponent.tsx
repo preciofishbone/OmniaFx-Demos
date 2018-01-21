@@ -14,6 +14,7 @@ import {
     OmniaContext,
     SharePointContext
 } from '@omnia/fx';
+import { BasicComponentLoc } from './loc/BasicComponentLoc';
 
 
 @Component

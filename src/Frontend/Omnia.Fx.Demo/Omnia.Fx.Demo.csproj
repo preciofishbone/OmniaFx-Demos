@@ -149,6 +149,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <TypeScriptCompile Include="Resources\demos\components\basic\loc\Basic.manifest.ts" />
+    <TypeScriptCompile Include="Resources\demos\components\basic\loc\BasicComponentLoc.ts" />
     <TypeScriptCompile Include="Resources\environment.manifest.ts" />
     <TypeScriptCompile Include="Resources\extension.manifest.ts" />
     <TypeScriptCompile Include="Resources\demos\components\basic\BasicComponent.manifest.ts" />
