@@ -1,6 +1,7 @@
 import * as tsx from "vue-tsx-support";
 export interface BasicSubComponentProps {
     subtext: string;
+    another: string;
 }
 export interface BasicSubComponentEvents {
     onOk: void;
@@ -16,6 +17,7 @@ export interface BasicSubComponentScopedSlots {
 }
 export default class BasicSubComponent extends tsx.Component<BasicSubComponentProps, BasicSubComponentEvents, BasicSubComponentScopedSlots> {
     subtext: string;
+    another: string;
     mounted(): void;
     render(h: any): any;
 }
