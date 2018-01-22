@@ -1,33 +1,31 @@
-﻿import Component from "vue-class-component";
-import * as tsx from "vue-tsx-support";
-import { Prop } from "vue-property-decorator";
+﻿import Component from 'vue-class-component';
+import { Prop } from 'vue-property-decorator';
+import * as tsx from 'vue-tsx-support';
 
 export interface BasicSubComponentProps {
-    subtext: string;
+  subtext: string;
 }
 
 export interface BasicSubComponentEvents {
-    onOk: void;
-    onError: { code: number, detail: string };
+  onOk: void;
+  onError: { code: number; detail: string };
 }
 
 export interface BasicSubComponentScopedSlots {
-    default: { text: string };
+  default: { text: string };
 }
 
 @Component
-export default class BasicSubComponent extends tsx.Component<BasicSubComponentProps, BasicSubComponentEvents, BasicSubComponentScopedSlots> {
+export default class BasicSubComponent extends tsx.Component<
+  BasicSubComponentProps,
+  BasicSubComponentEvents,
+  BasicSubComponentScopedSlots
+> {
+  @Prop() public subtext: string;
 
-    @Prop() subtext: string
+  public mounted() {}
 
-    mounted() {
-
-    }
-
-    render(h) {
-        return (
-            <div> I am a niceeeee sub component {this.subtext}! </div>
-        )
-    }
-
+  public render(h) {
+    return <div> I am a niceeeee sub component {this.subtext}! </div>;
+  }
 }
