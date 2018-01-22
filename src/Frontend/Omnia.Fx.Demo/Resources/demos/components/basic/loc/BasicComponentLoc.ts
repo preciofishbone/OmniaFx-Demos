@@ -1,5 +1,3 @@
-﻿
-
-export interface BasicComponentLoc {
-    title: string
+﻿export interface BasicComponentLoc {
+    title: string;
 }

@@ -29,3 +29,5 @@ We use typescript all in except for taskrunner
 !gulpfile.js
 !src/frontend/omnia.fx.demo/taskrunner/**/*.js
 
+.vscode
+
