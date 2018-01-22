@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "omf-before-build": "gulp omf-before-build",
-    "omf-after-build": "gulp omf-after-build"
+    "omf-after-build": "gulp omf-after-build",
+    "dev": "gulp omnia-serve",
+    "bundle": "gulp omnia-bundle"
   },
   "dependencies": {
     "@omnia/tooling": "1.0.9371-preview",
