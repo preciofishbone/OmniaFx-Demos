@@ -24,8 +24,10 @@ obj
 # Certs
 *.pfx
 
-We use typescript all in
+We use typescript all in except for taskrunner
 *.js
+!gulpfile.js
+!src/frontend/omnia.fx.demo/taskrunner/**/*.js
 
 .vscode
 
