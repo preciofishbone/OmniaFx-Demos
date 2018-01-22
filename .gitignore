@@ -27,3 +27,5 @@ obj
 We use typescript all in
 *.js
 
+.vscode
+
