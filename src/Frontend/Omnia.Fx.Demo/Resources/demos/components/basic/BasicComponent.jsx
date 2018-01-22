@@ -1,12 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
+var fx_1 = require("@omnia/fx");
 var vue_1 = require("vue");
 var vue_class_component_1 = require("vue-class-component");
 var BasicService_1 = require("../../services/BasicService");
-var BasicStyles = require("./BasicComponent.css");
-var BasicSubComponent_1 = require("./BasicSubComponent");
-var fx_1 = require("@omnia/fx");
 var BasicComponent = /** @class */ (function (_super) {
     tslib_1.__extends(BasicComponent, _super);
     function BasicComponent() {
@@ -16,10 +14,7 @@ var BasicComponent = /** @class */ (function (_super) {
         fx_1.WebComponentBootstrapper.registerElementInstance(this, this.$el);
     };
     BasicComponent.prototype.render = function (h) {
-        return (<div class={BasicStyles.redStyle}>
-                I am a web component and this is demo 
-                <BasicSubComponent_1.default another={this.omniaContext.user.loginName} subtext="Im passing this to sub component"></BasicSubComponent_1.default>
-            </div>);
+        return <div>I am a web component</div>;
     };
     tslib_1.__decorate([
         fx_1.Inject(BasicService_1.BasicService),

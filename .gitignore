@@ -27,6 +27,7 @@ obj
 We use typescript all in except for taskrunner
 *.js
 *.jsx
+*.d.ts
 !gulpfile.js
 !src/frontend/omnia.fx.demo/taskrunner/**/*.js
 
