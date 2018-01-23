@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
+var fx_1 = require("@omnia/fx");
 var vue_1 = require("vue");
 var vue_class_component_1 = require("vue-class-component");
 var BasicService_1 = require("../../services/BasicService");
-var fx_1 = require("@omnia/fx");
+var BasicSubComponent_1 = require("./BasicSubComponent");
 var BasicComponent = /** @class */ (function (_super) {
     tslib_1.__extends(BasicComponent, _super);
     function BasicComponent() {
@@ -13,10 +14,17 @@ var BasicComponent = /** @class */ (function (_super) {
     BasicComponent.prototype.mounted = function () {
         fx_1.WebComponentBootstrapper.registerElementInstance(this, this.$el);
     };
+    BasicComponent.prototype.onOk = function () {
+        fx_1.Console.logInfo('Subcomponent clicked');
+    };
+    BasicComponent.prototype.onError = function (details) {
+        fx_1.Console.logInfo(details);
+    };
     BasicComponent.prototype.render = function (h) {
-        return (<div>
-                I am a web component
-            </div>);
+        return <div>
+            <div>I am a web component</div>
+            <BasicSubComponent_1.default onOk={this.onOk} onError={this.onError}></BasicSubComponent_1.default>
+          </div>;
     };
     tslib_1.__decorate([
         fx_1.Inject(BasicService_1.BasicService),
