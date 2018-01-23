@@ -6,19 +6,23 @@
     "omf-before-build": "gulp omf-before-build",
     "omf-after-build": "gulp omf-after-build",
     "dev": "gulp omnia-serve",
-    "bundle": "gulp omnia-bundle"
+    "bundle": "gulp omnia-bundle",
+    "setup:cert": "node ./tools/generateCerts.js"
   },
   "dependencies": {
-    "@omnia/tooling": "1.0.9371-preview",
     "@omnia/foundation": "1.0.9371-preview",
     "@omnia/fx": "1.0.9371-preview",
     "@omnia/spfx": "1.0.9371-preview",
-    "gulp-less": "3.0.3"
+    "@omnia/tooling": "1.0.9371-preview",
+    "gulp-less": "3.0.3",
+    "node-forge": "^0.7.1"
   },
   "devDependencies": {
     "glob": "5.0.13",
     "gulp": "3.9.1",
-    "gulp-cli": "1.2.2"
+    "gulp-cli": "1.2.2",
+    "pem": "^1.12.3",
+    "node-powershell": "^3.3.1"
   },
   "engines": {
     "node": ">=0.10.0"

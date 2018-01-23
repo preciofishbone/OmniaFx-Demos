@@ -4,6 +4,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "lib": [ "es2015", "dom" ],
+    "allowJs": true,
     "declaration": true,
     "sourceMap": false,
     "inlineSourceMap": false,
