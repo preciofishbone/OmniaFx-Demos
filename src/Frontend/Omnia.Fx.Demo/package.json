@@ -19,7 +19,6 @@
     "node-forge": "^0.7.1"
   },
   "devDependencies": {
-    "@omnia/fx": "^1.0.9778-preview",
     "@types/jest": "^22.1.0",
     "glob": "5.0.13",
     "gulp": "3.9.1",
