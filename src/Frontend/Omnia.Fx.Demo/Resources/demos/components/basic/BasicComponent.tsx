@@ -8,6 +8,7 @@
     SharePointContext,
     WebComponentBootstrapper,
 } from '@omnia/fx';
+
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import { Prop, Emit } from 'vue-property-decorator';
