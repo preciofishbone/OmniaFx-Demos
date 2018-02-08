@@ -1,13 +1,15 @@
 ﻿import {
     Console,
     HttpClient,
-    Inject,
-    IWebComponentInstance,
+    Inject,ContextMessages,    
     Localize,
     OmniaContext,
-    SharePointContext,
-    WebComponentBootstrapper,
+    SharePointContext
 } from '@omnia/fx';
+import {
+    IWebComponentInstance,
+    WebComponentBootstrapper
+} from '@omnia/fx/bootstrap';
 
 import Vue from 'vue';
 import Component from 'vue-class-component';
