@@ -7,24 +7,44 @@
     "omf-after-build": "gulp omf-after-build",
     "dev": "gulp omnia-serve",
     "bundle": "gulp omnia-bundle",
-    "setup:cert": "node ./tools/generateCerts.js"
+    "setup:cert": "node ./tools/generateCerts.js",
+    "test": "jest"
   },
   "dependencies": {
-    "@omnia/foundation": "1.0.9371-preview",
-    "@omnia/fx": "1.0.9371-preview",
-    "@omnia/spfx": "1.0.9371-preview",
-    "@omnia/tooling": "1.0.9371-preview",
+    "@omnia/foundation": "1.0.9778-preview",
+    "@omnia/fx": "1.0.9778-preview",
+    "@omnia/spfx": "1.0.9778-preview",
+    "@omnia/tooling": "1.0.9778-preview",
     "gulp-less": "3.0.3",
     "node-forge": "^0.7.1"
   },
   "devDependencies": {
+    "@types/jest": "^22.1.0",
     "glob": "5.0.13",
     "gulp": "3.9.1",
     "gulp-cli": "1.2.2",
+    "jest": "^22.1.4",
+    "jest-cli": "^22.1.4",
+    "node-powershell": "^3.3.1",
+    "package-preview": "^1.0.5",
     "pem": "^1.12.3",
-    "node-powershell": "^3.3.1"
+    "ts-jest": "^22.0.1"
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx|jsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/Resources/.*|\\.(test|spec))\\.(test.ts|test.tsx)$",
+    "testPathIgnorePatterns": [
+      "<rootDir>/Resources/Dist"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
   }
 }
