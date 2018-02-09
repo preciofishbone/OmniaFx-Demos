@@ -19,9 +19,9 @@ const pfxPath = path.join(rootPath,"tools", "certificate.pfx");
  * If you want to use environment path to openssl you can 
  * uncomment below and point to the openssl binaries
  */
-pem.config({
-  pathOpenSSL: 'C:/Program Files/OpenSSL/bin/openssl.exe'
-});
+// pem.config({
+//   pathOpenSSL: 'C:/Program Files/OpenSSL/bin/openssl.exe'
+// });
 
 console.log("Generating Certs");
 createCertPr({
