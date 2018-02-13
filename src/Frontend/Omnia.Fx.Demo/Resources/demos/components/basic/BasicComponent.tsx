@@ -48,9 +48,9 @@ export class BasicComponent extends Vue implements IWebComponentInstance {
     }
 }
 
-// WebComponentBootstrapper.registerElement((manifest) => {    
-//     document
-//         .querySelectorAll('.omf-header')[0]
-//         .appendChild(document.createElement(manifest.elementName));
-//     Vue.customElement(manifest.elementName, new BasicComponent().$options);
-// });
+WebComponentBootstrapper.registerElement((manifest) => {    
+    document
+        .querySelectorAll('.omf-header')[0]
+        .appendChild(document.createElement(manifest.elementName));
+    Vue.customElement(manifest.elementName, new BasicComponent().$options);
+});

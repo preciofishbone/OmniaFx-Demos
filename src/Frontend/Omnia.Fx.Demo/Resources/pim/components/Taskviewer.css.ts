@@ -14,8 +14,7 @@ export class TaskViewerStyles
     public static TableRow = style(
         {
             fontFamily: "Segoe UI",
-            fontSize : "50px;"
-            
+            fontSize : "12px;"            
         }
     )
 }   

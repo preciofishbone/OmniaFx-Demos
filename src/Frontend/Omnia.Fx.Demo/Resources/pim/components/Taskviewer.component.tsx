@@ -35,8 +35,7 @@ export class TaskViewerComponent extends Vue implements IWebComponentInstance {
     public mounted() {
         WebComponentBootstrapper.registerElementInstance(this, this.$el);    
         GlobalStore.subscribe(this.onStoreChanged.bind(this));        
-        GlobalStore.dispatch(Actions.LoadUserTasks("fakeUser"));      
-        this.$forceUpdate();
+        GlobalStore.dispatch(Actions.LoadUserTasks("fakeUser"));              
     }
 
     /**
@@ -62,8 +61,7 @@ export class TaskViewerComponent extends Vue implements IWebComponentInstance {
             )
         });
         return result;
-    }    
-
+    }  
 
     /**
      * Render the component
@@ -76,7 +74,7 @@ export class TaskViewerComponent extends Vue implements IWebComponentInstance {
         return <div>
             <table class={TaskViewerStyles.Table}>
                 <thead>
-                    <tr >
+                    <tr>
                         <th>Name</th>
                         <th>Description</th>
                         <th>Status</th>                                        
