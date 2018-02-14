@@ -17,6 +17,16 @@ import {PimSession} from "../models";
 export interface IPimService{
     getTasks(userName:string);
     loadSession();
+    getSPToken();
+}
+
+export interface IContextInfo {
+    d: {
+        GetContextWebInformation: {
+            FormDigestTimeoutSeconds,
+            FormDigestValue
+        }
+    }
 }
 
 /**
@@ -56,5 +66,27 @@ export const PimService:IPimService = {
             }
             GlobalStore.commit(MutationCatalog.Session.SetSessionState(fakeSession));         
         },1000);           
+        //PimService.getSPToken();
+    },
+    getSPToken(){
+        let requestUrl = "https://m365x964999.sharepoint.com/sites/omniafx-dj/_api/contextinfo";
+        fetch(requestUrl,{
+                method : "POST",
+                headers: { "Accept": "application/json; odata=verbose" },
+                mode : "cors",
+                credentials: "same-origin"
+        })        
+        .then(function(data:Response){
+            debugger;
+            data.json().then((data) =>{
+                let result:IContextInfo = <IContextInfo>data;
+                alert("token:" + result.d.GetContextWebInformation.FormDigestValue);
+            });                       
+        })
+        .catch(function(error){
+            alert('error:' + error);
+        })        
+
     }
+    
 }

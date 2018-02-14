@@ -65,7 +65,6 @@ export const pimSessionStoreModule:PimSessionStoreModule = {
         createSession(store:ActionContext<PimState,GlobalState>):void {
             if(!pimSessionStoreModule.getters.isSessionLoaded())
             {
-                debugger;
                 pimSessionStoreModule.pimService.loadSession();
             }
         }
