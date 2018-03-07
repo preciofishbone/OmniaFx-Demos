@@ -11,10 +11,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "@omnia/foundation": "1.0.9889-preview",
-    "@omnia/fx": "1.0.9889-preview",
-    "@omnia/spfx": "1.0.9889-preview",
-    "@omnia/tooling": "1.0.9889-preview",
+    "@omnia/foundation": "1.0.10110-preview",
+    "@omnia/fx": "1.0.10110-preview",
+    "@omnia/spfx": "1.0.10110-preview",
+    "@omnia/tooling": "1.0.10110-preview",
     "gulp-less": "3.0.3",
     "node-forge": "^0.7.1"
   },
