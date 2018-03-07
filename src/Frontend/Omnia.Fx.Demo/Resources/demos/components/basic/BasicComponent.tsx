@@ -42,16 +42,15 @@ export class BasicComponent extends Vue implements IWebComponentInstance {
 
     public render(h) {
         return <div>
-            <div>I am a web component</div>
+            <div>I am a web component 5</div>
             <BasicSubComponent onOk={this.onOk} onError={this.onError}></BasicSubComponent>
           </div>;
     }
 }
 
-WebComponentBootstrapper.registerElement((manifest) => {
+WebComponentBootstrapper.registerElement((manifest) => {    
     document
         .querySelectorAll('.omf-header')[0]
         .appendChild(document.createElement(manifest.elementName));
-
     Vue.customElement(manifest.elementName, new BasicComponent().$options);
 });
