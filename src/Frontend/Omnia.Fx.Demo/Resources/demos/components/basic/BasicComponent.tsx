@@ -4,13 +4,10 @@
     Inject,ContextMessages,    
     Localize,
     OmniaContext,
-    SharePointContext
-} from '@omnia/fx';
-import {
+    SharePointContext,
     IWebComponentInstance,
     WebComponentBootstrapper
-} from '@omnia/fx/bootstrap';
-
+} from '@omnia/fx';
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import { Prop, Emit } from 'vue-property-decorator';
@@ -18,6 +15,7 @@ import { BasicService } from '../../services/BasicService';
 import * as BasicStyles from './BasicComponent.css';
 import BasicSubComponent, { ErrorDetails } from './BasicSubComponent';
 import { BasicComponentLoc } from './loc/BasicComponentLoc';
+import 'vue-tsx-support/enable-check';
 
 @Component
 export class BasicComponent extends Vue implements IWebComponentInstance {
@@ -43,7 +41,7 @@ export class BasicComponent extends Vue implements IWebComponentInstance {
     public render(h) {
         return <div>
             <div>I am a web component 5</div>
-            <BasicSubComponent onOk={this.onOk} onError={this.onError}></BasicSubComponent>
+            <BasicSubComponent subtext="sub text" onOk={this.onOk} onError={this.onError}></BasicSubComponent>
           </div>;
     }
 }
@@ -52,5 +50,5 @@ WebComponentBootstrapper.registerElement((manifest) => {
     document
         .querySelectorAll('.omf-header')[0]
         .appendChild(document.createElement(manifest.elementName));
-    Vue.customElement(manifest.elementName, new BasicComponent().$options);
+    Vue.customElement(manifest.elementName, BasicComponent);
 });

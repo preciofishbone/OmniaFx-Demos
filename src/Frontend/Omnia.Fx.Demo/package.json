@@ -30,7 +30,6 @@
     "pem": "^1.12.3",
     "ts-jest": "^22.0.1"
   },
-  
   "engines": {
     "node": ">=0.10.0"
   },
@@ -39,12 +38,12 @@
       ".(ts|tsx|jsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "moduleNameMapper": {
-      "(@omnia\/fx\/)": "<rootDir>/__mocks__/index.ts"
-    },    
+      "(@omnia/fx/)": "<rootDir>/__mocks__/index.ts"
+    },
     "testRegex": "(/Resources/.*|\\.(test|spec))\\.(test.ts|test.tsx)$",
     "testPathIgnorePatterns": [
       "<rootDir>/Resources/Dist"
-    ],    
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
