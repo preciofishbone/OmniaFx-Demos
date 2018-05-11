@@ -1,0 +1,28 @@
+{
+  "name": "omnia",
+  "version": "1.0.0",
+  "scripts": {
+    "omnia-before-build": "gulp omnia-before-build",
+    "omnia-after-build": "gulp omnia-after-build"
+  },
+  "dependencies": {
+    "@omnia/fx": "0.3.29-vnext",
+    "gulp": "3.9.1",
+    "gulp-cli": "2.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.1.0",
+    "glob": "5.0.13",
+    "gulp": "3.9.1",
+    "gulp-cli": "1.2.2",
+    "jest": "^22.1.4",
+    "jest-cli": "^22.1.4",
+    "node-powershell": "^3.3.1",
+    "package-preview": "^1.0.5",
+    "pem": "^1.12.3",
+    "ts-jest": "^22.0.1"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}

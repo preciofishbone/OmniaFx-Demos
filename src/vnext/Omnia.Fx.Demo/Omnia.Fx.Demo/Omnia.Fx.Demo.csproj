@@ -1,0 +1,88 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <AssemblyName>Omnia.Fx.Demo</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.1\Omnia.Fx.Demo.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="tools\**" />
+    <Content Remove="tools\**" />
+    <EmbeddedResource Remove="tools\**" />
+    <None Remove="tools\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="omfxconfig.d.ts" />
+    <None Remove="omfxconfig.js" />
+    <None Remove="Resources\demos\components\basic\BasicComponent.d.ts" />
+    <None Remove="Resources\demos\components\basic\BasicComponent.jsx" />
+    <None Remove="Resources\demos\components\basic\BasicSubComponent.d.ts" />
+    <None Remove="Resources\demos\components\basic\BasicSubComponent.jsx" />
+    <None Remove="Resources\demos\components\basic\loc\Basic.manifest.d.ts" />
+    <None Remove="Resources\demos\components\basic\loc\Basic.manifest.js" />
+    <None Remove="Resources\demos\services\BasicService.d.ts" />
+    <None Remove="Resources\demos\store\action.catalog.d.ts" />
+    <None Remove="Resources\demos\store\action.catalog.js" />
+    <None Remove="Resources\demos\store\component\Component.actions.d.ts" />
+    <None Remove="Resources\demos\store\component\Component.actions.js" />
+    <None Remove="Resources\demos\store\component\Component.module.store.d.ts" />
+    <None Remove="Resources\demos\store\component\Component.module.store.js" />
+    <None Remove="Resources\demos\store\component\Component.module.store.test.d.ts" />
+    <None Remove="Resources\demos\store\component\Component.module.store.test.js" />
+    <None Remove="Resources\demos\store\component\Component.mutations.d.ts" />
+    <None Remove="Resources\demos\store\component\Component.mutations.js" />
+    <None Remove="Resources\demos\store\component\index.d.ts" />
+    <None Remove="Resources\demos\store\component\index.js" />
+    <None Remove="Resources\demos\store\index.d.ts" />
+    <None Remove="Resources\demos\store\index.js" />
+    <None Remove="Resources\demos\store\mutation.catalog.d.ts" />
+    <None Remove="Resources\demos\store\mutation.catalog.js" />
+    <None Remove="Resources\environment.manifest.d.ts" />
+    <None Remove="Resources\environment.manifest.js" />
+    <None Remove="Resources\extension.manifest.d.ts" />
+    <None Remove="Resources\extension.manifest.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="tools\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Microsoft.TypeScript.Compiler" Version="2.8.3" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="2.8.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Omnia.Fx.NetCore" Version="0.3.29-vnext">
+      <IncludeAssets>all</IncludeAssets>
+      <ExcludeAssets>contentFiles</ExcludeAssets>
+      <PrivateAssets>contentFiles;analyzers</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
+
+  </ItemGroup>
+  <Target Name="OmniaRunBeforeBuild" BeforeTargets="Build">
+    <Exec Command="npm run omnia-before-build" ContinueOnError="false">
+    </Exec>
+  </Target>
+  <Target Name="OmniaRunAfterBuild" AfterTargets="Build">
+    <Exec Command="npm run omnia-after-build" ContinueOnError="false">
+    </Exec>
+  </Target>
+  <Target Name="IncludeOmniaOutput" AfterTargets="ComputeFilesToPublish">
+    <ItemGroup>
+      <DistFiles Include="wwwroot\omnia\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+</Project>

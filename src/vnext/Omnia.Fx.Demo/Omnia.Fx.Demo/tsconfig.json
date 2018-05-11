@@ -1,0 +1,28 @@
+﻿{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": [ "es2015", "dom" ],
+    "declaration": true,
+    "sourceMap": false,
+    "inlineSourceMap": false,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve"
+  },
+  "compileOnSave": true,
+  "include": [
+    "omfxconfig.ts",
+    "Resources/**/*",
+    "tools/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

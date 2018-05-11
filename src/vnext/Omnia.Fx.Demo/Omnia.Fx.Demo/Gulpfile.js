@@ -1,0 +1,2 @@
+﻿
+require("@omnia/tooling").init();
