@@ -6,10 +6,7 @@ Composer
     .AsWebApp()
     .withBuildOptions({
         include: ["client"],
-        moduleOptions: {
-            enableTransformResourcePath: true
-        },
-        enableAutoAddManifestDependency: true
+        moduleOptions: {}
     });
   
    
