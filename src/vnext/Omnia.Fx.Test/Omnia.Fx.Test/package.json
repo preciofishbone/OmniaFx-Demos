@@ -1,0 +1,16 @@
+{
+  "name": "Omnia.Fx.Test",
+  "version": "0.1.0",
+  "scripts": {
+    "omnia-before-build": "gulp omnia-before-build",
+    "omnia-after-build": "gulp omnia-after-build"
+  },
+  "dependencies": {
+    "@omnia/fx": "0.4.31-vnext",
+    "gulp": "3.9.1",
+    "gulp-cli": "2.0.1"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
