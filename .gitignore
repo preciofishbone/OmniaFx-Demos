@@ -33,5 +33,5 @@ We use typescript all in except for taskrunner
 !src/frontend/omnia.fx.demo/taskrunner/**/*.js
 
 .vscode
-
+publish
 *.pem

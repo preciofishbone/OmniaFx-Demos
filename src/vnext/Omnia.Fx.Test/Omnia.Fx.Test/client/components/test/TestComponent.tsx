@@ -8,6 +8,7 @@ import {
     Inject
 } from "@omnia/fx";
 
+declare var Zepto: ZeptoStatic;
 
 
 @Component
@@ -18,14 +19,12 @@ export default class ActionMenuComponent extends Vue implements IWebComponentIns
         WebComponentBootstrapper
             .registerElementInstance(this, this.$el);
 
-        alert('im loaded');
-
     }
 
 
     render(h) {
         return (
-            <div>Header</div>
+            <h1>Hello im a extension that adds my-test to body</h1>
         )
     }
 }
@@ -33,4 +32,9 @@ export default class ActionMenuComponent extends Vue implements IWebComponentIns
 
 WebComponentBootstrapper.registerElement((manifest) => {
     vueCustomElement(manifest.elementName, ActionMenuComponent);
+
+    Zepto(() => {
+        document.body.appendChild(document.createElement("my-test"));
+    }); 
+
 });
