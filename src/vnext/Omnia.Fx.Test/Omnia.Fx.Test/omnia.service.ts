@@ -5,11 +5,7 @@ Composer
     .registerService({ description: "Description of Omnia.Fx.Test" })
     .AsWebApp()
     .withBuildOptions({
-        include: ["client"],
-        moduleOptions: {
-            enableTransformResourcePath: true
-        },
-        enableAutoAddManifestDependency: true
+        include: ["client"]
     });
   
    
