@@ -15,7 +15,7 @@ declare var Zepto: ZeptoStatic;
 
 
 @Component
-export default class ActionMenuComponent extends Vue implements IWebComponentInstance {
+export default class TestComponent extends Vue implements IWebComponentInstance {
     @Inject(TestService) private testService: TestService;
     @Localize("MyTest") private loc: MyLocalize;
 
@@ -41,7 +41,7 @@ export default class ActionMenuComponent extends Vue implements IWebComponentIns
 
 
 WebComponentBootstrapper.registerElement((manifest) => {
-    vueCustomElement(manifest.elementName, ActionMenuComponent);
+    vueCustomElement(manifest.elementName, TestComponent);
 
     Zepto(() => {
         document.body.appendChild(document.createElement("my-test"));
