@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Omnia.Fx.HostConfiguration;
+using Omnia.Fx.HostConfiguration.Extensions;
 using Omnia.Fx.NetCore.Extensions;
-using Omnia.Fx.NetCore.SharePoint.HostConfiguration.Extensions;
-using Omnia.Fx.NetCore.Tenants.Extensions;
 using System;
 
 namespace Omnia.Fx.Test
@@ -14,9 +14,7 @@ namespace Omnia.Fx.Test
             try
             {
                 BuildWebHost(args)
-                .Run();
-
-               
+                .Run();              
 
             }
             catch (Exception ex)
@@ -28,10 +26,9 @@ namespace Omnia.Fx.Test
 
         public static IWebHost BuildWebHost(string[] args) =>
           WebHost.CreateDefaultBuilder(args)
-                .AddOmniaFxClientResourcesHandler()
-                .AddOmniaFxNetCoreTenant()
-                .AddOmniaFxNetCoreSharePoint()
-                .AddStartup<Startup>()
+                .UseOmniaWebAppConfiguration<Startup>(
+                  OmniaWebAppConfiguration.Instance.AddOmniaFxWebApp()
+                )            
                 .Build();
     }
 }
