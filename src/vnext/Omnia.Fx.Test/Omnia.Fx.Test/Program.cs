@@ -27,7 +27,8 @@ namespace Omnia.Fx.Test
         public static IWebHost BuildWebHost(string[] args) =>
           WebHost.CreateDefaultBuilder(args)
                 .UseOmniaWebAppConfiguration<Startup>(
-                  OmniaWebAppConfiguration.Instance.AddOmniaFxWebApp()
+                    options => options.AddOmniaFxWebApp()
+                  //OmniaWebAppConfiguration.Instance.AddOmniaFxWebApp()
                 )            
                 .Build();
     }

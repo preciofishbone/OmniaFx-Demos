@@ -28,13 +28,13 @@
     <PackageReference Include="Microsoft.TypeScript.Compiler" Version="2.8.3" />
     <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="2.8.3" />
     <PackageReference Include="NUglify" Version="1.5.11" />
-    <PackageReference Include="Omnia.Fx.NetCore" Version="0.4.84-vnext">
+    <PackageReference Include="Omnia.Fx.NetCore" Version="0.4.96-vnext">
       <IncludeAssets>all</IncludeAssets>
       <ExcludeAssets>contentFiles</ExcludeAssets>
       <PrivateAssets>contentFiles;analyzers</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Omnia.Fx.NetCore.SharePoint" Version="0.4.84-vnext"></PackageReference>
-    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="0.4.84-vnext" />
+    <PackageReference Include="Omnia.Fx.NetCore.SharePoint" Version="0.4.96-vnext"></PackageReference>
+    <PackageReference Include="Omnia.Fx.NetCore.WebApp" Version="0.4.96-vnext" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
 
   </ItemGroup>
