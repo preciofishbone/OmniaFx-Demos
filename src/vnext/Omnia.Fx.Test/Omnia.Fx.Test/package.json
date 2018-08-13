@@ -6,7 +6,7 @@
     "omnia-after-build": "gulp omnia-after-build"
   },
   "dependencies": {
-    "@omnia/fx": "0.4.101-vnext",
+    "@omnia/fx": "0.4.106-vnext",
     "gulp": "3.9.1",
     "gulp-cli": "2.0.1"
   },

@@ -10,3 +10,4 @@ export class TestService {
     }
 
 }
+var test = 1;
