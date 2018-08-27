@@ -14,7 +14,8 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "typeRoots": [ "./node_modules/@omnia/types", "./node_modules/@types" ]
   },
   "compileOnSave": true,
   "exclude": [

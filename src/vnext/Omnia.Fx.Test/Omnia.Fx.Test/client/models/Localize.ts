@@ -1,3 +1,4 @@
 ﻿export type MyLocalize = {
-    title: string;
+    Title: string;
+    WebpartSettingFormTitle:string
 }
