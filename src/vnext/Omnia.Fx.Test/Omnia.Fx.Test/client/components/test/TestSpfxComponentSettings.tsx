@@ -10,10 +10,10 @@ import {
 
 import { SettingsServiceConstructor, SettingsService, SecurityProviders } from "@omnia/fx/services";
 import { SettingsPaneModel } from '@omnia/fx/ux';
-import { TestService } from "../../services/TestService";
 import { MyLocalize } from '../../models/Localize';
 import { MySettings } from '../../models/MySettings';
 import { ITestSpfxComponentSettings } from './ITestSpfxComponentSettings';
+import { TestSharepointService } from '../../services';
 
 @Component
 export default class TestSpfxComponentSettings extends Vue implements IWebComponentInstance, ITestSpfxComponentSettings {
@@ -22,7 +22,7 @@ export default class TestSpfxComponentSettings extends Vue implements IWebCompon
     @Prop() onClosed: () => void;
 
     @Inject<SettingsServiceConstructor>(SettingsService, { securityProviderId: SecurityProviders.Tenant.Admin }) protected settingsService: SettingsService<MySettings>;
-    @Inject(TestService) private testService: TestService;
+    @Inject(TestSharepointService) private testService: TestSharepointService;
     @Localize("MyTest") private loc: MyLocalize;
 
     private settingsPaneModel: SettingsPaneModel = { visible: this.opened }

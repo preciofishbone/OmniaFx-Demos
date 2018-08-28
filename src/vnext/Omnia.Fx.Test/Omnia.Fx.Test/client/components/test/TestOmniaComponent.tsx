@@ -8,13 +8,13 @@ import {
     Inject
 } from "@omnia/fx";
 
-import { TestService } from "../../services/TestService";
 import { MyLocalize } from '../../models/Localize';
+import { TestOmniaService } from '../../services';
 declare var Zepto: ZeptoStatic;
 
 @Component
 export default class TestOmniaComponent extends Vue implements IWebComponentInstance {
-    @Inject(TestService) private testService: TestService;
+    @Inject(TestOmniaService) private testService: TestOmniaService;
     @Localize("MyTest") private loc: MyLocalize;
 
     mounted() {
