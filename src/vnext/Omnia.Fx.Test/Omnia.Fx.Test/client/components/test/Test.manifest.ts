@@ -20,6 +20,11 @@ Composer
         icon: new FontAwesomeIcon("fas fa-bell")
     })
     .registerSpfxWebpart()
+    //.withDependency("bcf8c865-736d-4399-b602-909196626bd6");
+
+//Composer.registerManifest(new Guid("bcf8c865-736d-4399-b602-909196626bd6")).registerResourceGroup({
+//    webComponentManifestIds: ["c2ab7b2e-2e09-4f8c-8771-98174d161e07"]
+//})
 
 
 Composer

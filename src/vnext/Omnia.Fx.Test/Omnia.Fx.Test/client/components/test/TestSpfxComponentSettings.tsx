@@ -8,7 +8,7 @@ import {
     Inject
 } from "@omnia/fx";
 
-import { SettingsServiceConstructor, SettingsService, SecurityProviders } from "@omnia/fx/services";
+import { SettingsServiceConstructor, SettingsService } from "@omnia/fx/services";
 import { SettingsPaneModel } from '@omnia/fx/ux';
 import { MyLocalize } from '../../models/Localize';
 import { MySettings } from '../../models/MySettings';
@@ -21,7 +21,7 @@ export default class TestSpfxComponentSettings extends Vue implements IWebCompon
     @Prop() settingsKey: string;
     @Prop() onClosed: () => void;
 
-    @Inject<SettingsServiceConstructor>(SettingsService, { securityProviderId: SecurityProviders.Tenant.Admin }) protected settingsService: SettingsService<MySettings>;
+    @Inject<SettingsServiceConstructor>(SettingsService) protected settingsService: SettingsService<MySettings>;
     @Inject(TestSharepointService) private testService: TestSharepointService;
     @Localize("MyTest") private loc: MyLocalize;
 

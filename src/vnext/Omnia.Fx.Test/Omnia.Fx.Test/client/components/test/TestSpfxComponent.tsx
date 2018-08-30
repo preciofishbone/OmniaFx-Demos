@@ -12,14 +12,14 @@ import {OpenSpfxWebPartSettingsFormTopic } from "@omnia/fx/spfx"
 
 import { MyLocalize } from '../../models/Localize';
 import { MySettings } from '../../models/MySettings';
-import { SettingsServiceConstructor, SettingsService, SecurityProviders } from '@omnia/fx/services';
+import { SettingsServiceConstructor, SettingsService } from '@omnia/fx/services';
 import { TestSharepointService } from '../../services';
 
 @Component
 export default class TestSpfxComponent extends Vue implements IWebComponentInstance {
     @Prop() settingsKey: string;
 
-    @Inject<SettingsServiceConstructor>(SettingsService, { securityProviderId: SecurityProviders.Tenant.Admin }) protected settingsService: SettingsService<any>;
+    @Inject<SettingsServiceConstructor>(SettingsService) protected settingsService: any;
     @Inject(TestSharepointService) private testService: TestSharepointService;
     @Localize("MyTest") private loc: MyLocalize;
 
