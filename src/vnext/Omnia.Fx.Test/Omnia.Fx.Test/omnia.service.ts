@@ -10,11 +10,10 @@ Composer
         moduleOptions: {
             enableTransformResourcePath: true
         },
-        enableAutoAddManifestDependency: true
-        //bundleOptions: {
-        //    commonsChunk: {
-        //        name: new Guid("9e7a893e-9657-4ff2-82c4-038d2e4cb8d6"),
-        //        minChunks:2
-        //    }
-        //}
+        bundleOptions: {
+            commonsChunk: {
+                name: new Guid("9e7a893e-9657-4ff2-82c4-038d2e4cb8d6"),
+                minChunks:2
+            }
+        }
     });
